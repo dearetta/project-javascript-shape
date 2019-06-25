@@ -1,0 +1,1 @@
+#Javascript Rectangle Area Calculator Console
