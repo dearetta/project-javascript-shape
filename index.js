@@ -1,8 +1,7 @@
+let rectangleLength = prompt("How long is the length?")
+let rectangleWidth = prompt("How long is the width?")
 
-const rectangleWidth = 100
-const rectangleLength = 20
-
-const rectangleArea = rectangleWidth * rectangleLength
+const rectangleArea = parseInt(rectangleWidth) * parseInt(rectangleLength) 
 
 console.log(`${rectangleArea} = ${rectangleWidth} * ${rectangleLength}`)
 
