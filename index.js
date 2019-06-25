@@ -1,9 +1,7 @@
-
 let chooseShape = prompt(" What object you want to calculate " +
     "1. Rectangle " +
     "2. Triangle " +
     "3. Circle")
-
 
 switch (true) {
     case chooseShape == '1':
@@ -29,10 +27,13 @@ switch (true) {
         break
 
     default:
-        console.log("Please enter the right option number");
+        prompt(chooseShape)
         break
 
 }
+
+
+
 
 
 
