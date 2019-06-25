@@ -2,10 +2,10 @@ let chooseShape;
 
 while (true) {
 
-    chooseShape = prompt(" What object you want to calculate " +
-        "1. Rectangle " +
-        "2. Triangle " +
-        "3. Circle")
+    chooseShape = prompt(" What object you would like to calculate? " +
+        "\n 1. Rectangle " +
+        "\n 2. Triangle " +
+        "\n 3. Circle")
 
     if (chooseShape == '1') {
         let rectangleLength = prompt("How long is the length?")
