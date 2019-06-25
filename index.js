@@ -1,36 +1,49 @@
-let chooseShape = prompt(" What object you want to calculate " +
-    "1. Rectangle " +
-    "2. Triangle " +
-    "3. Circle")
+let chooseShape;
 
-switch (true) {
-    case chooseShape == '1':
+while (true) {
+
+    chooseShape = prompt(" What object you want to calculate " +
+        "1. Rectangle " +
+        "2. Triangle " +
+        "3. Circle")
+
+    if (chooseShape == '1') {
         let rectangleLength = prompt("How long is the length?")
         let rectangleWidth = prompt("How long is the width?")
-        const rectangleArea = parseInt(rectangleWidth) * parseInt(rectangleLength)
-
+        const rectangleArea = parseFloat(rectangleWidth) * parseFloat(rectangleLength)
         console.log(`${rectangleArea} = ${rectangleWidth} * ${rectangleLength}`)
-
-    case chooseShape == '2':
+        alert(rectangleArea)
+        break
+        // return rectangleArea;
+        
+    }
+    else if (chooseShape == '2') {
         let triangleBase = prompt("How many cm is the Base?")
-        let triangleHeighth = prompt("How many cm is the Height?")
-        const triangleArea = 1 / 2 * parseInt(triangleBase) * parseInt(triangleHeighth)
+        let triangleHeight = prompt("How many cm is the Height?")
+        const triangleArea = 1 / 2 * parseFloat(triangleBase) * parseFloat(triangleHeight)
 
-        console.log(`${triangleArea} = 1/2 * ${triangleBase} * ${triangleHeighth}`)
+
+        console.log(`${triangleArea} = 1/2 * ${triangleBase} * ${triangleHeight}`)
+        alert(triangleArea)
         break
+        // return triangleArea;
 
-    case chooseShape == '3':
+    }
+    else if (chooseShape == '3') {
+
         let circleRadius = prompt("How many cm is the Radius?")
-        const circleArea = 3.14 * circleRadius
+        const circleArea = 22 / 7 * Math.pow(circleRadius, 2)
 
-        console.log(`${circleArea} = 3.14 * ${circleRadius}`)
+        console.log(circleArea)
+        alert(circleArea)
         break
-
-    default:
-        prompt(chooseShape)
-        break
-
+        // return circleArea;
+    }
+    alert('wrong answer')
 }
+
+
+
 
 
 
