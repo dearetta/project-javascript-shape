@@ -1,24 +1,42 @@
-let rectangleLength = prompt("How long is the length?")
-let rectangleWidth = prompt("How long is the width?")
 
-const rectangleArea = parseInt(rectangleWidth) * parseInt(rectangleLength)
+let chooseShape = prompt(" What object you want to calculate " +
+    "1. Rectangle " +
+    "2. Triangle " +
+    "3. Circle")
 
-console.log(`${rectangleArea} = ${rectangleWidth} * ${rectangleLength}`)
 
 switch (true) {
-    case rectangleLength > rectangleWidth:
-        let sizeDifference = parseInt(rectangleLength) - parseInt(rectangleWidth)
-        console.log(`The length is longer by ${sizeDifference}`);
+    case chooseShape == '1':
+        let rectangleLength = prompt("How long is the length?")
+        let rectangleWidth = prompt("How long is the width?")
+        const rectangleArea = parseInt(rectangleWidth) * parseInt(rectangleLength)
+
+        console.log(`${rectangleArea} = ${rectangleWidth} * ${rectangleLength}`)
+
+    case chooseShape == '2':
+        let triangleBase = prompt("How many cm is the Base?")
+        let triangleHeighth = prompt("How many cm is the Height?")
+        const triangleArea = 1 / 2 * parseInt(triangleBase) * parseInt(triangleHeighth)
+
+        console.log(`${triangleArea} = 1/2 * ${triangleBase} * ${triangleHeighth}`)
         break
 
-    case rectangleLength < rectangleWidth:
-        let sizeDifference = parseInt(rectangleWidth) - parseInt(rectangleLength)
-        console.log(`The width is longer by  ${sizeDifference}`);
+    case chooseShape == '3':
+        let circleRadius = prompt("How many cm is the Radius?")
+        const circleArea = 3.14 * circleRadius
+
+        console.log(`${circleArea} = 3.14 * ${circleRadius}`)
         break
+
     default:
-        console.log("no difference, your shape is a square!");
+        console.log("Please enter the right option number");
         break
 
 }
+
+
+
+
+
 
 // Feel free to have some experiments with variety of shape formulas
